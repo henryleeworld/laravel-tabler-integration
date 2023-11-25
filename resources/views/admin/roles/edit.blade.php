@@ -14,7 +14,7 @@
                 <form action="{{ route("admin.roles.update", [$role->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                    <div class="mb-3 {{ $errors->has('name') ? 'has-error' : '' }}">
                         <label for="name" class="form-label">{{ trans('cruds.role.fields.title') }}*</label>
                         <input type="text" id="name" name="name" class="form-control" value="{{ old('name', isset($role) ? $role->name : '') }}" required>
                         @if($errors->has('name'))
@@ -26,7 +26,7 @@
                             {{ trans('cruds.role.fields.title_helper') }}
                         </p>
                     </div>
-                    <div class="form-group {{ $errors->has('permission') ? 'has-error' : '' }}">
+                    <div class="mb-3 {{ $errors->has('permission') ? 'has-error' : '' }}">
                         <label for="permission" class="form-label">{{ trans('cruds.role.fields.permissions') }}*
                             <span class="btn btn-info btn-sm select-all">{{ trans('global.select_all') }}</span>
                             <span class="btn btn-info btn-sm deselect-all">{{ trans('global.deselect_all') }}</span>
