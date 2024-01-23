@@ -9,7 +9,7 @@
 
             <div class="mb-3">
                 <label class="form-label">{{ __('Email address') }}</label>
-                <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Enter email') }}" required autofocus tabindex="1">
+                <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Enter email') }}" required autocomplete="email" autofocus tabindex="1">
                 @error('email')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -24,7 +24,7 @@
                     </span>
                     @endif
                 </label>
-                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" required tabindex="2">
+                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('Password') }}" required autocomplete="current-password" tabindex="2">
                 @error('password')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -32,7 +32,7 @@
 
             <div>
                 <label class="form-check">
-                    <input type="checkbox" class="form-check-input" tabindex="3" name="remember" />
+                    <input type="checkbox" class="form-check-input" tabindex="3" name="remember" {{ old('remember') ? 'checked' : '' }}/>
                     <span class="form-check-label">{{ __('Remember me on this device') }}</span>
                 </label>
             </div>

@@ -18,7 +18,7 @@
                     </span>
                     @endif
                 </label>
-                <input type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror" placeholder="{{ __('Enter Password') }}">
+                <input id="password" type="password" name="password" class="form-control form-control-user @error('password') is-invalid @enderror" placeholder="{{ __('Enter Password') }}" required autocomplete="current-password">
                 @error('password')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror

@@ -11,7 +11,7 @@
 
             <div class="mb-3">
                 <label class="form-label">{{ __('Email address') }}</label>
-                <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Email Address') }}">
+                <input id="email" type="email" name="email" value="{{ $email ?? old('email') }}" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('Email Address') }}" required autocomplete="email" autofocus>
                 @error('email')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -19,7 +19,7 @@
 
             <div class="mb-3">
                 <label class="form-label">{{ __('New Password') }}</label>
-                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('New Password') }}">
+                <input id="password" type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="{{ __('New Password') }}" required autocomplete="new-password">
                 @error('password')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
@@ -27,7 +27,7 @@
 
             <div class="mb-3">
                 <label class="form-label">{{ __('Repeat New Password') }}</label>
-                <input type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" placeholder="{{ __('Repeat New Password') }}">
+                <input id="password-confirm" type="password" name="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror" placeholder="{{ __('Repeat New Password') }}" required autocomplete="new-password">
                 @error('password_confirmation')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror
