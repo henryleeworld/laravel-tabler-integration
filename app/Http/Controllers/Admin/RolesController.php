@@ -23,7 +23,7 @@ class RolesController extends Controller
             return abort(401);
         }
 
-        $roles = Role::all();
+        $roles = Role::with('permissions')->get();
 
         return view('admin.roles.index', compact('roles'));
     }
