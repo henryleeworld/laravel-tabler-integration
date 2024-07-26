@@ -1,4 +1,4 @@
-# Laravel 10 Tabler 整合
+# Laravel 11 Tabler 整合
 
 整合 Tabler 簡潔的管理性網站版型，高度可定製，易於使用，瀏覽器支援 IE9 以 上、FireFox、Safari、Chrome 及 Opera 的最新版本。
 
@@ -16,13 +16,17 @@ $ composer install
 ```sh
 $ php artisan key:generate
 ```
-- 建置正式環境的資源版本。
+- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移，並執行資料庫填充（如果要測試的話）。
+```sh
+$ php artisan migrate --seed
+```
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
+```sh
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
 ```sh
 $ npm run build
-```
-- 執行 __Artisan__ 指令的 __migrate__ 來執行所有未完成的遷移。
-```sh
-$ php artisan migrate
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/register` 來進行註冊。
@@ -30,11 +34,11 @@ $ php artisan migrate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/cHj77oo.png)
+![](https://i.imgur.com/oLGDi6c.png)
 > 建立新的帳號
 
-![](https://i.imgur.com/Nk3w7JV.png)
+![](https://i.imgur.com/pkgDcOG.png)
 > 使用現有的帳號登入
 
-![](https://i.imgur.com/hYVCwLk.png)
+![](https://i.imgur.com/0LETrCy.png)
 > 省去不少前端布局的時間，可以把時間拿來處理各項統計資料的分析及產出

@@ -69,7 +69,7 @@
 								<ul class="list-inline list-inline-dots mb-0">
 									<li class="list-inline-item">
 										&copy; {{ date('Y') }}
-										<a href="{{ config('app.url') }}" class="badge badge-pill badge-dark">{{ config('app.name') }}</a>
+										<a href="{{ config('app.url') }}" class="badge bg-secondary">{{ config('app.name') }}</a>
 									</li>
                                     <!--
 									<li class="list-inline-item">
