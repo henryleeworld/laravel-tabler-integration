@@ -8,11 +8,9 @@ use Spatie\Permission\Models\Role;
 class RoleSeed extends Seeder
 {
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         $role = Role::create(['name' => 'administrator']);
         $role->givePermissionTo('users_manage');
